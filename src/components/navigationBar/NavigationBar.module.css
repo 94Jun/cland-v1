@@ -1,0 +1,12 @@
+.nav{}
+.list{}
+.item{
+  display: flex;
+  align-items: center;
+  gap : 10px;
+  min-height: 50px;
+  margin : 30px 0;
+  font-size: 18px;
+}
+.icon{}
+.name{}
