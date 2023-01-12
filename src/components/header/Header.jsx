@@ -1,9 +1,12 @@
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import { Link } from "react-router-dom";
-import MainButton from "../UI/MainButton";
+import MainButton from "../UI/button/MainButton";
 import styles from './Header.module.css'
+import useToggle from "../../hooks/useToggle";
+import ScheduleModal from "../schedule/addSchedule/ScheduleModal";
 
 const Header = () => {
+  const [scheduleModalIsShown, toggleScheduleModal] = useToggle(false)
   return (
     <header className={styles.header}>
       <Link to="/">
@@ -15,8 +18,9 @@ const Header = () => {
         </div>
       </Link>
       <div className={styles.btn_wrap}>
-        <MainButton>+ 일정 추가</MainButton>
+        <MainButton onClick={toggleScheduleModal}>+ 일정 추가</MainButton>
       </div>
+      {scheduleModalIsShown && <ScheduleModal toggleScheduleModal={toggleScheduleModal}/>}
     </header>
   );
 };

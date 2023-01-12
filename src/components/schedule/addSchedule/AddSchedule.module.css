@@ -1,0 +1,29 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  min-width: 500px;
+  min-height: 70%;
+  max-height: 90%;
+  background-color: #eee;
+  transform: translate(-50%, -50%);
+  border-radius: 1em;
+}
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin: 20px;
+}
+.modal button {
+  width: 200px;
+  border-radius: 10px;
+}
+.btn_wrap {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 50px;
+}
